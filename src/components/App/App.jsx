@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import getGallery from '../../endpoints/getGalleryList';
 
 function App() {
+
+  useEffect(() => {
+    console.log('in useEffect')
+    getGallery();
+  }, []);
+
     return (
       <div className="App">
         {getGallery()}
