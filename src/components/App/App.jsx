@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Gallery from '../Gallery/Gallery';
+import Uppy, { XHRUpload, DragDrop, Dashboard } from '@uppy/core';
+import 'uppy/dist/uppy.min.css'
 
 function App() {
   
@@ -27,6 +29,10 @@ function App() {
     })
   }
 
+  // const uppy = new Uppy().use(Dashboard, {
+  //   inline: true,
+  // });
+
   const likeImage = (id) => {
     console.log('This is the id', id);
 
@@ -48,6 +54,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <div class="container">
+        <div id="drag-drop-area"></div>
           <Gallery 
             imageGallery={imageGallery}
             likeImage = {likeImage}

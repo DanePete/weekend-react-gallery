@@ -36,11 +36,10 @@ function GalleryItem({path, id, likeImage, description, fetchList, likes}) {
             <img className='card-img-top' src={path} alt='Card image cap'></img>
           </div>
           <div className='card-body'>
-            <h5 className='card-title'>{likes}</h5>
-            <div className='card-text'>
-              
-            </div>
-            <button onClick={markItLiked} className='btn btn-primary'>LIKE</button>
+            <div className='card-text'></div>
+            <button onClick={markItLiked} type="button" class="btn btn-primary">
+            Like <span class="badge badge-light">{likes}</span>
+            </button>
           </div>
         </div>  
       </div>
