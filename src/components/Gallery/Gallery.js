@@ -1,27 +1,18 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function Gallery({imageGallery}) {
-
-  let images = [];
-    // const itemDeleted = () => {
-    //     // deleteItem(data.id)
-    //     fetchList();
-    // }
-
-    // console.log('data in shopping list item component', data);
-    console.log('wowza',imageGallery);
+function Gallery({imageGallery, likeImage}) {
     return (
-      <>
+      <div className="row">
         {imageGallery.map(itemIndividual => 
         (
-          images.push({original: itemIndividual.path, thumbnail: itemIndividual.path})
+            <GalleryItem 
+              path = {itemIndividual.path}
+              id = {itemIndividual.id}
+              likeImage = {likeImage}
+            />
         ))}
-
-        <ImageGallery items={images} />;
-      </>
-    
-    
+      </div>
     );
 }
 
