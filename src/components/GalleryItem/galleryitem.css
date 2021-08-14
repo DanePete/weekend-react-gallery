@@ -1,0 +1,24 @@
+.description-image-container {
+  position: relative;
+}
+
+.descriptions {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: black;
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.card {
+  margin: 10px;
+  box-shadow: 6px 7px 16px 5px #00000091;
+}

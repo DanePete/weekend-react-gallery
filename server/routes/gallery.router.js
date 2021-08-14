@@ -6,7 +6,7 @@ const galleryItems = require('../modules/gallery.data');
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 router.get('/', (req, res) => {
-    const sqlQuery = `SELECT * FROM "gallery"`;
+    const sqlQuery = `SELECT * FROM "gallery" ORDER BY "likes" DESC; `;
     pool.query(sqlQuery)
         .then((result) => {
             console.log('Received data from DB', result);
@@ -34,7 +34,8 @@ router.get('/', (req, res) => {
 router.put('/:id', (req, res) => {
     const sqlQuery = `
         UPDATE "gallery"
-        SET "likes" = likes + 1 WHERE "id" = $1;
+        SET    "likes" = likes + 1
+        WHERE  "id" = $1
         `;
         const sqlParams = [
             req.params.id

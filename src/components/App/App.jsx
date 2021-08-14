@@ -35,6 +35,7 @@ function App() {
         url: `/gallery/${id}`
     }).then(response => {
         console.log('marked item purchased');
+        fetchList();
     }).catch(error => {
         console.log('PUT error', error);
     })
@@ -42,14 +43,23 @@ function App() {
 
 
     return (
-      <div className="App">
+      <div className="App ripple-background">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <Gallery 
-          imageGallery={imageGallery}
-          likeImage={likeImage}
-        />
+        <div class="container">
+          <Gallery 
+            imageGallery={imageGallery}
+            likeImage = {likeImage}
+            fetchList = {fetchList}
+          />
+        </div>
+        <div className="circle xxlarge shade1"></div>
+        <div className="circle xlarge shade2"></div>
+        <div className="circle large shade3"></div>
+        <div className="circle mediun shade4"></div>
+        <div className="circle small shade5"></div>
+
       </div>
     );
 }
