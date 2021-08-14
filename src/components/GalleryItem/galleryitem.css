@@ -12,10 +12,22 @@
 
 .hidden {
   visibility: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: black;
+  width: 100%;
+  line-height: 100px;
 }
 
 .visible {
   visibility: visible !important;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: black;
+  width: 100%;
+  line-height: 100px;
 }
 
 .card {

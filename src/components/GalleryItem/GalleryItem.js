@@ -21,7 +21,8 @@ function GalleryItem({path, id, likeImage, description, fetchList, likes}) {
 
   if(over){
     // buttonstyle.backgroundColor="green";
-    console.log('hello');
+    
+  } else {
   }
 
 
@@ -30,15 +31,14 @@ function GalleryItem({path, id, likeImage, description, fetchList, likes}) {
     <>
       <div key={id} className='col-sm-4'>
         <div className='card'>
-          <div class="description-image-container">
-            <div class="descriptions hidden">BLAG BLAG</div>
-            <img onMouseOver={()=>setOver(true)} onMouseOut={()=>setOver(false)} className='card-img-top' src={path} alt='Card image cap'></img>
+          <div onMouseOver={()=>setOver(true)} onMouseOut={()=>setOver(false)}  class="description-image-container">
+            <div className={over ? 'visible': 'hidden'}>{description}</div>
+            <img className='card-img-top' src={path} alt='Card image cap'></img>
           </div>
           <div className='card-body'>
-            <h5 className='card-title'>dane</h5>
+            <h5 className='card-title'>{likes}</h5>
             <div className='card-text'>
-              {description} <br />
-              {likes}
+              
             </div>
             <button onClick={markItLiked} className='btn btn-primary'>LIKE</button>
           </div>
