@@ -2,4 +2,4 @@
 
 ## Description
 
-A simple image gallery
+A simple image gallery which utilizes Node, React, SQL, Axios, PG   
