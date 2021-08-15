@@ -9,25 +9,8 @@ function GalleryItem({path, id, likeImage, description, fetchList, likes}) {
   }
 
   let [over,setOver]=React.useState(false);
-
-  let visibility={
-    backgroundColor:''
-  }
-
-  const mouseOver = () => {
-    console.log('hey hey', over);
-    <h1>hello</h1>
-  }
-
-  if(over){
-    // buttonstyle.backgroundColor="green";
-    
-  } else {
-  }
-
-
+  
   return (
-
     <>
       <div key={id} className='col-sm-4'>
         <div className='card'>

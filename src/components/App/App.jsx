@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Gallery from '../Gallery/Gallery';
-import Uppy, { XHRUpload, DragDrop, Dashboard } from '@uppy/core';
-import 'uppy/dist/uppy.min.css'
 
 function App() {
   
@@ -45,30 +43,28 @@ function App() {
     }).catch(error => {
         console.log('PUT error', error);
     })
-}
+  }
 
-
-    return (
-      <div className="App ripple-background">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <div class="container">
-        <div id="drag-drop-area"></div>
-          <Gallery 
-            imageGallery={imageGallery}
-            likeImage = {likeImage}
-            fetchList = {fetchList}
-          />
-        </div>
-        <div className="circle xxlarge shade1"></div>
-        <div className="circle xlarge shade2"></div>
-        <div className="circle large shade3"></div>
-        <div className="circle mediun shade4"></div>
-        <div className="circle small shade5"></div>
-
+  return (
+    <div className="App ripple-background">
+      <header className="App-header">
+        <h1 className="App-title">Gallery of My Life</h1>
+      </header>
+      <div class="container">
+      <div id="drag-drop-area"></div>
+        <Gallery 
+          imageGallery={imageGallery}
+          likeImage = {likeImage}
+          fetchList = {fetchList}
+        />
       </div>
-    );
+      <div className="circle xxlarge shade1"></div>
+      <div className="circle xlarge shade2"></div>
+      <div className="circle large shade3"></div>
+      <div className="circle mediun shade4"></div>
+      <div className="circle small shade5"></div>
+    </div>
+  );
 }
 
 export default App;
